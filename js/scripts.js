@@ -14,10 +14,14 @@ var leadingLetter = function(originalMessage) {
 	return originalMessage.charAt(Math.floor(originalMessage.length / 2));
 };
 
-var endSwap = function(message){
+var endSwap = function(message) {
 	return message + letterSwap(bookEnds(message));
+};
+
+var reverseString = function(string) {
+	return string.split("").reverse().join("");
 };
 
 var userMessage = prompt("enter a sentence!");
 
-alert(leadingLetter(userMessage) + endSwap(userMessage));
+alert(reverseString(leadingLetter(userMessage) + endSwap(userMessage)));
