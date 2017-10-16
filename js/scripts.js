@@ -4,4 +4,16 @@ var bookEnds = function(message) {
   return firstLetter.toUpperCase() + lastLetter.toUpperCase();
 };
 
-bookEnds("bloorp");
+var letterSwap = function(characters) {
+	var firstLetter = characters.charAt(1);
+  var secondLetter = characters.charAt(0);
+  return firstLetter + secondLetter;
+};
+
+var userMessage = prompt("enter a sentence!");
+
+alert(userMessage);
+
+var firstAndLast = bookEnds(userMessage);
+
+alert(letterSwap(firstAndLast));
