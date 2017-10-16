@@ -11,7 +11,7 @@ var letterSwap = function(characters) {
 };
 
 var leadingLetter = function(originalMessage) {
-	return originalMessage.charAt(originalMessage.length / 2);
+	return originalMessage.charAt(Math.floor(originalMessage.length / 2));
 };
 
 var endSwap = function(message){
@@ -20,4 +20,4 @@ var endSwap = function(message){
 
 var userMessage = prompt("enter a sentence!");
 
-alert(endSwap(userMessage));
+alert(leadingLetter(userMessage) + endSwap(userMessage));
