@@ -10,10 +10,14 @@ var letterSwap = function(characters) {
   return firstLetter + secondLetter;
 };
 
+var leadingLetter = function(originalMessage) {
+	return originalMessage.charAt(originalMessage.length / 2);
+};
+
+var endSwap = function(message){
+	return message + letterSwap(bookEnds(message));
+};
+
 var userMessage = prompt("enter a sentence!");
 
-alert(userMessage);
-
-var firstAndLast = bookEnds(userMessage);
-
-alert(letterSwap(firstAndLast));
+alert(endSwap(userMessage));
